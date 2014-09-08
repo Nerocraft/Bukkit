@@ -219,7 +219,6 @@ public class YamlConfiguration extends FileConfiguration {
         return config;
     }
 
-
     /**
      * Creates a new {@link YamlConfiguration}, loading from the given reader.
      * <p>
