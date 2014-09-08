@@ -115,13 +115,13 @@ public interface ItemMeta extends Cloneable, ConfigurationSerializable {
      */
     boolean removeEnchant(Enchantment ench);
 
-   /**
-    * Checks if the specified enchantment conflicts with any enchantments in
-    * this ItemMeta.
-    *
-    * @param ench enchantment to test
-    * @return true if the enchantment conflicts, false otherwise
-    */
+    /**
+     * Checks if the specified enchantment conflicts with any enchantments in
+     * this ItemMeta.
+     *
+     * @param ench enchantment to test
+     * @return true if the enchantment conflicts, false otherwise
+     */
     boolean hasConflictingEnchant(Enchantment ench);
 
     // Nerocraft - Implemented Unbreakable ItemMeta API (https://github.com/Kiskae/Bukkit/commit/df02da4081aeba08d96efa00f7be2afdf7aa5f6a)

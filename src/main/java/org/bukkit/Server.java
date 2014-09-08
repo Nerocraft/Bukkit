@@ -85,15 +85,15 @@ public interface Server extends PluginMessageRecipient {
     public String getBukkitVersion();
 
     /**
-    * Gets an array copy of all currently logged in players.
-    * <p>
-    * This method exists for legacy reasons to provide backwards
-    * compatibility. It will not exist at runtime and should not be used
-    * under any circumstances.
-    *
-    * @Deprecated superseded by {@link #getOnlinePlayers()}
-    * @return an array of Players that are currently online
-    */
+     * Gets an array copy of all currently logged in players.
+     * <p>
+     * This method exists for legacy reasons to provide backwards
+     * compatibility. It will not exist at runtime and should not be used
+     * under any circumstances.
+     *
+     * @Deprecated superseded by {@link #getOnlinePlayers()}
+     * @return an array of Players that are currently online
+     */
     @Deprecated
     public Player[] _INVALID_getOnlinePlayers();
 

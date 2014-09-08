@@ -93,13 +93,13 @@ public final class Bukkit {
 
     // Nerocraft
     /**
-    * This method exists for legacy reasons to provide backwards
-    * compatibility. It will not exist at runtime and should not be used
-    * under any circumstances.
-    *
-    * @Deprecated
-    * @see Server#_INVALID_getOnlinePlayers()
-    */
+     * This method exists for legacy reasons to provide backwards
+     * compatibility. It will not exist at runtime and should not be used
+     * under any circumstances.
+     *
+     * @Deprecated
+     * @see Server#_INVALID_getOnlinePlayers()
+     */
     @Deprecated
     public static Player[] _INVALID_getOnlinePlayers() {
         return server._INVALID_getOnlinePlayers();

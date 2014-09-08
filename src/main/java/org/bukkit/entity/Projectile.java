@@ -8,10 +8,10 @@ import org.bukkit.projectiles.ProjectileSource;
 public interface Projectile extends Entity {
 
     /**
-    * This method exists for legacy reasons to provide backwards
-    * compatibility. It will not exist at runtime and should not be used
-    * under any circumstances.
-    */
+     * This method exists for legacy reasons to provide backwards
+     * compatibility. It will not exist at runtime and should not be used
+     * under any circumstances.
+     */
     @Deprecated
     public LivingEntity _INVALID_getShooter();
 
@@ -23,10 +23,10 @@ public interface Projectile extends Entity {
     public ProjectileSource getShooter();
 
     /**
-    * This method exists for legacy reasons to provide backwards
-    * compatibility. It will not exist at runtime and should not be used
-    * under any circumstances.
-    */
+     * This method exists for legacy reasons to provide backwards
+     * compatibility. It will not exist at runtime and should not be used
+     * under any circumstances.
+     */
     @Deprecated
     public void _INVALID_setShooter(LivingEntity shooter);
 
