@@ -127,7 +127,6 @@ public enum EntityEffect {
         return BY_DATA.get(data);
     }
 
-
     static {
         for (EntityEffect entityEffect : values()) {
             BY_DATA.put(entityEffect.data, entityEffect);

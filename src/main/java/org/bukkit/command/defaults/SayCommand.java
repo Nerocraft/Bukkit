@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.commons.lang.Validate;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Sound;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
@@ -43,6 +44,11 @@ public class SayCommand extends VanillaCommand {
             for (int i = 1; i < args.length; i++) {
                 message.append(" ").append(args[i]);
             }
+        }
+
+        // Nerocraft - A sound is now played to every player when the say command is used
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            player.playSound(player.getLocation(), Sound.NOTE_PLING, 100.0F, 1.0F);
         }
 
         Bukkit.broadcastMessage(message.toString());

@@ -66,7 +66,8 @@ public final class Bukkit {
         }
 
         Bukkit.server = server;
-        server.getLogger().info("This server is running " + getName() + " version " + getVersion() + " (Implementing API version " + getBukkitVersion() + ")");
+//        server.getLogger().info("This server is running " + getName() + " version " + getVersion() + " (Implementing API version " + getBukkitVersion() + ")"); // Nerocraft - Changed
+        server.getLogger().info(getName() + " " + getVersion() + " (Implementing API version " + getBukkitVersion() + ")");
     }
 
     /**
@@ -90,14 +91,15 @@ public final class Bukkit {
         return server.getBukkitVersion();
     }
 
+    // Nerocraft
     /**
-     * This method exists for legacy reasons to provide backwards
-     * compatibility. It will not exist at runtime and should not be used
-     * under any circumstances.
-     *
-     * @Deprecated
-     * @see Server#_INVALID_getOnlinePlayers()
-     */
+    * This method exists for legacy reasons to provide backwards
+    * compatibility. It will not exist at runtime and should not be used
+    * under any circumstances.
+    *
+    * @Deprecated
+    * @see Server#_INVALID_getOnlinePlayers()
+    */
     @Deprecated
     public static Player[] _INVALID_getOnlinePlayers() {
         return server._INVALID_getOnlinePlayers();
@@ -197,7 +199,7 @@ public final class Bukkit {
     /**
      * @see Server#getPlayer(String name)
      */
-    @Deprecated
+//    @Deprecated // Nerocraft - Removed deprecation
     public static Player getPlayer(String name) {
         return server.getPlayer(name);
     }
@@ -447,7 +449,7 @@ public final class Bukkit {
     /**
      * @see Server#getPlayerExact(String name)
      */
-    @Deprecated
+//    @Deprecated // Nerocraft - Removed deprecation
     public static Player getPlayerExact(String name) {
         return server.getPlayerExact(name);
     }

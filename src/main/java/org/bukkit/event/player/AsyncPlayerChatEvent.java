@@ -3,6 +3,7 @@ package org.bukkit.event.player;
 import java.util.IllegalFormatException;
 import java.util.Set;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
@@ -27,7 +28,8 @@ public class AsyncPlayerChatEvent extends PlayerEvent implements Cancellable {
     private static final HandlerList handlers = new HandlerList();
     private boolean cancel = false;
     private String message;
-    private String format = "<%1$s> %2$s";
+//    private String format = "%1$s: %2$s"; // Nerocraft - Changed chat format
+    private String format = ChatColor.GRAY + "[" + ChatColor.GOLD + Integer.toString(player.getLevel()) + ChatColor.GRAY + "]" + ChatColor.RESET + " %1$s: %2$s";
     private final Set<Player> recipients;
 
     /**

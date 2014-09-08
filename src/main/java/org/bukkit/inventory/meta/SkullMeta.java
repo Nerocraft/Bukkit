@@ -1,5 +1,7 @@
 package org.bukkit.inventory.meta;
 
+import java.util.UUID;
+
 import org.bukkit.Material;
 
 /**
@@ -22,15 +24,28 @@ public interface SkullMeta extends ItemMeta {
     boolean hasOwner();
 
     /**
-     * Sets the owner of the skull.
-     * <p>
-     * Plugins should check that hasOwner() returns true before calling this
-     * plugin.
+     * Sets the owner of the skull by UUID.
      *
-     * @param owner the new owner of the skull
+     * @param owner the UUID of the new owner of the skull
+     * @return true if the owner was successfully set
+     */
+    boolean setOwner(UUID owner);
+
+    /**
+     * Sets the owner of the skull by name.
+     *
+     * @param owner the name of the new owner of the skull
      * @return true if the owner was successfully set
      */
     boolean setOwner(String owner);
+
+    // Nerocraft - Implemented a way to set player head texture
+    /**
+     * Sets the texture of this skull, encoded by Base64.
+     *
+     * @param texture the raw Base64 string
+     */
+    void setTexture(String texture);
 
     SkullMeta clone();
 }

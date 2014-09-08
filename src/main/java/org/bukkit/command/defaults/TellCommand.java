@@ -37,10 +37,14 @@ public class TellCommand extends VanillaCommand {
                 message.append(args[i]);
             }
 
-            String result = ChatColor.GRAY + sender.getName() + " whispers " + message;
-
-            sender.sendMessage("[" + sender.getName() + "->" + player.getName() + "] " + message);
-            player.sendMessage(result);
+            // Nerocraft - Moved down into sendMessage
+//            String result = ChatColor.GRAY + sender.getName() + " whispers " + message;
+//
+            // Nerocraft - Changed message command text to "[Sender -> Receiver] Message" (sender/receiver is seen as "me")
+//            sender.sendMessage("[" + sender.getName() + "->" + player.getName() + "] " + message);
+            sender.sendMessage(ChatColor.GRAY + "[me -> " + player.getName() + ChatColor.GRAY + "] " + ChatColor.RESET + message);
+            player.sendMessage(ChatColor.GRAY + "[" + sender.getName() + ChatColor.GRAY + " -> me] " + ChatColor.RESET + message);
+//            player.sendMessage(result);
         }
 
         return true;

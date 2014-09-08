@@ -13,7 +13,7 @@ public class PlayerDeathEvent extends EntityDeathEvent {
     private String deathMessage = "";
     private int newLevel = 0;
     private int newTotalExp = 0;
-    private boolean keepLevel = false;
+    private boolean keepLevel = true; // Nerocraft - Default keepLevel to true
     private boolean keepInventory = false;
 
     public PlayerDeathEvent(final Player player, final List<ItemStack> drops, final int droppedExp, final String deathMessage) {

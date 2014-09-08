@@ -39,4 +39,46 @@ public interface Arrow extends Projectile {
      * @param critical whether or not it should be critical
      */
     public void setCritical(boolean critical);
+
+    // Nerocraft - Added setter and getter for arrow damage into Bukkit API, including documentation
+    /**
+     * Gets the amount of damage this arrow will deal when it hits a living
+     * entity.
+     *
+     * @return The amount of damage this arrow will deal
+     */
+    public double getDamage();
+
+    /**
+     * Sets the amount of damage this arrow will deal when it hits a living
+     * entity.
+     *
+     * @param damage The amount of damage this arrow will deal
+     */
+    public void setDamage(double damage);
+
+    // Nerocraft - Added setter and getter for pickup mode of arrow into Bukkit API, including documentation
+    /**
+     * Gets the pickup mode of this arrow
+     *
+     * @return
+     * <ul>
+     * <li>0 = Cannot be picked up by players
+     * <li>1 = Can be picked up by players
+     * <li>2 = Can only be picked up by players in creative
+     * </ul>
+     */
+    public int getPickup();
+
+    /**
+     * Sets the pickup mode of this arrow
+     *
+     * @param mode
+     * <ul>
+     * <li>0 = Cannot be picked up by players
+     * <li>1 = Can be picked up by players
+     * <li>2 = Can only be picked up by players in creative
+     * </ul>
+     */
+    public void setPickup(int mode);
 }

@@ -76,7 +76,7 @@ public class WoodenStep extends MaterialData {
     public boolean isInverted() {
         return ((getData() & 0x8) != 0);
     }
-    
+
     /**
      * Set step inverted state
      *
@@ -90,7 +90,7 @@ public class WoodenStep extends MaterialData {
         }
         setData((byte) dat);
     }
-    
+
     @Override
     public WoodenStep clone() {
         return (WoodenStep) super.clone();

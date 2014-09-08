@@ -35,32 +35,12 @@ public class EntityRegainHealthEvent extends EntityEvent implements Cancellable 
     }
 
     /**
-     * This method exists for legacy reasons to provide backwards
-     * compatibility. It will not exist at runtime and should not be used
-     * under any circumstances.
-     */
-    @Deprecated
-    public int _INVALID_getAmount() {
-        return NumberConversions.ceil(getAmount());
-    }
-
-    /**
      * Sets the amount of regained health
      *
      * @param amount the amount of health the entity will regain
      */
     public void setAmount(double amount) {
         this.amount = amount;
-    }
-
-    /**
-     * This method exists for legacy reasons to provide backwards
-     * compatibility. It will not exist at runtime and should not be used
-     * under any circumstances.
-     */
-    @Deprecated
-    public void _INVALID_setAmount(int amount) {
-        setAmount(amount);
     }
 
     public boolean isCancelled() {

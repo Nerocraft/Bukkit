@@ -9,7 +9,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
+//import org.bukkit.entity.Player;
 import org.bukkit.util.StringUtil;
 
 import com.google.common.collect.ImmutableList;
@@ -33,9 +33,10 @@ public class DeopCommand extends VanillaCommand {
         OfflinePlayer player = Bukkit.getOfflinePlayer(args[0]);
         player.setOp(false);
 
-        if (player instanceof Player) {
-            ((Player) player).sendMessage(ChatColor.YELLOW + "You are no longer op!");
-        }
+// Nerocraft - Disable deop message ("You are no longer op!")
+//        if (player instanceof Player) {
+//            ((Player) player).sendMessage(ChatColor.YELLOW + "You are no longer op!");
+//        }
 
         Command.broadcastCommandMessage(sender, "De-opped " + args[0]);
         return true;

@@ -14,6 +14,14 @@ import org.bukkit.permissions.Permissible;
  */
 public interface HumanEntity extends LivingEntity, AnimalTamer, Permissible, InventoryHolder {
 
+    // Nerocraft
+    /**
+     * Sets the name of this player.
+     *
+     * @param name Player name
+     */
+    public void setName(String name);
+
     /**
      * Returns the name of this player
      *
@@ -132,6 +140,143 @@ public interface HumanEntity extends LivingEntity, AnimalTamer, Permissible, Inv
      * @param item The ItemStack which will end up in the hand
      */
     public void setItemOnCursor(ItemStack item);
+
+    // Nerocraft - Added setter and getter for infected players into Bukkit API, including documentation
+    /**
+     * Sets whether the player is infected based on the flag.
+     *
+     * @param flag
+     */
+    public void setInfected(boolean flag);
+
+    /**
+     * Gets whether the player is infected or not.
+     *
+     * @return Player's infected state
+     */
+    public boolean isInfected();
+
+    // Nerocraft - Added setter and getter for explosive players into Bukkit API, including documentation
+    /**
+     * Sets whether the player is explosive based on the flag.
+     * <p>
+     * Explosive players will make a small explosion once killed by an
+     * Entity which is not an infected player or zombie. The explosive
+     * player also may not be infected for them to explode.
+     *
+     * @param flag
+     */
+    public void setExplosive(boolean flag);
+
+    /**
+     * Gets whether the player is explosive or not.
+     *
+     * @return If the player will explode on death
+     */
+    public boolean isExplosive();
+
+    // Nerocraft - Added setter and getter for amount of monster kills of players into Bukkit API, including documentation
+    /**
+     * Sets the amount of monster kills this player has.
+     *
+     * @param amount The amount of monster kills
+     */
+    public void setMonsterKills(int amount);
+
+    /**
+     * Gets the amount of monster kills this player has.
+     *
+     * @return The amount of monster kills
+     */
+    public int getMonsterKills();
+
+    // Nerocraft - Added setter and getter for Archery EXP into Bukkit API, including documentation
+    /**
+     * Sets the archery exp of this player.
+     *
+     * @param exp The exact experience value
+     */
+    public void setArcheryExp(int exp);
+
+    /**
+     * Gets the archery exp of this player.
+     *
+     * @return The exact experience value
+     */
+    public int getArcheryExp();
+
+    // Nerocraft - Added 'getArcheryLevel()' method into Bukkit API, including documentation
+    /**
+     * Gets the archery level of this player.
+     *
+     * @return The exact archery experience level
+     */
+    public int getArcheryLevel();
+
+    // Nerocraft - Added setter and getter for Energy into Bukkit API, including documentation
+    /**
+     * Sets this player's current Energy
+     *
+     * @param energy The player's Energy
+     */
+    public void setEnergy(float energy);
+
+    /**
+     * Gets this player's current Energy
+     *
+     * @return The player's Energy
+     */
+    public float getEnergy();
+
+    // Nerocraft - Added setter and getter for Mana into Bukkit API, including documentation
+    /**
+     * Sets this player's current Mana points
+     *
+     * @param mana The player's Mana points
+     */
+    public void setMana(int mana);
+
+    /**
+     * Gets this player's current Mana points
+     *
+     * @return The player's Mana points
+     */
+    public int getMana();
+
+    // Nerocraft - Added 'setManaCooldown()' method into Bukkit API, including documentation
+    /**
+     * Sets the mana cooldown of this player.
+     * <p>
+     * Time in ticks before mana may go up again.
+     *
+     * @param cooldown Cooldown time in ticks
+     */
+    public void setManaCooldown(int cooldown);
+
+    // Nerocraft - Added 'getManaCooldown()' method into Bukkit API, including documentation
+    /**
+     * Gets the mana cooldown of this player.
+     * <p>
+     * Time in ticks before mana may go up again.
+     *
+     * @return mana cooldown
+     */
+    public int getManaCooldown();
+
+    // Nerocraft - Added setter and getter for ingame state into Bukkit API, including documentation
+    /**
+     * Sets this player's current ingame state
+     *
+     * @param flag true if playing, false if else
+     */
+    public void setIngame(boolean flag);
+
+    /**
+     * Gets this player's current ingame state
+     *
+     * @return true if playing, false if else
+     */
+    public boolean isIngame();
 
     /**
      * Returns whether this player is slumbering.

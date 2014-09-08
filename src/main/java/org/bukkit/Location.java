@@ -257,6 +257,26 @@ public class Location implements Cloneable {
         return vector;
     }
 
+    // Nerocraft - Added 'getHorizontalDirection()' into Bukkit API (Location.java), including documentation
+    /**
+     * Gets a unit-vector pointing in the horizontal direction that this
+     * Location is facing.
+     *
+     * @return a vector pointing the direction of this location's
+     *     {@link #getYaw() yaw}
+     */
+    public Vector getHorizontalDirection() {
+        Vector vector = new Vector();
+
+        double rotX = this.getYaw();
+
+        vector.setY(0);
+        vector.setX(-Math.sin(Math.toRadians(rotX)));
+        vector.setZ(Math.cos(Math.toRadians(rotX)));
+
+        return vector;
+    }
+
     /**
      * Sets the {@link #getYaw() yaw} and {@link #getPitch() pitch} to point
      * in the direction of the vector.

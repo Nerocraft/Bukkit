@@ -8,7 +8,6 @@ import java.util.HashMap;
 
 import org.bukkit.entity.Player;
 
-
 public class TestPlayer implements InvocationHandler {
     private static interface MethodHandler {
         Object handle(TestPlayer server, Object[] args);

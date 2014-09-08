@@ -64,9 +64,9 @@ public interface LivingEntity extends Entity, Damageable, ProjectileSource {
      * @param maxDistance this is the maximum distance to scan (may be limited
      *     by server by at least 100 blocks, no less)
      * @return block that the living entity has targeted
-     * @deprecated Magic value
+//     * @deprecated Magic value
      */
-    @Deprecated
+//    @Deprecated // Nerocraft - Removed deprecation
     public Block getTargetBlock(HashSet<Byte> transparent, int maxDistance);
 
     /**
@@ -170,27 +170,11 @@ public interface LivingEntity extends Entity, Damageable, ProjectileSource {
     public double getLastDamage();
 
     /**
-     * This method exists for legacy reasons to provide backwards
-     * compatibility. It will not exist at runtime and should not be used
-     * under any circumstances.
-     */
-    @Deprecated
-    public int _INVALID_getLastDamage();
-
-    /**
      * Sets the damage dealt within the current no damage ticks time period.
      *
      * @param damage amount of damage
      */
     public void setLastDamage(double damage);
-
-    /**
-     * This method exists for legacy reasons to provide backwards
-     * compatibility. It will not exist at runtime and should not be used
-     * under any circumstances.
-     */
-    @Deprecated
-    public void _INVALID_setLastDamage(int damage);
 
     /**
      * Returns the living entity's current no damage ticks.

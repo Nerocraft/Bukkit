@@ -7,6 +7,22 @@ import org.bukkit.util.Vector;
  */
 public interface Fireball extends Projectile, Explosive {
 
+    // Nerocraft - Implemented API for enabling/disabling Guided Fireballs, including documentation
+    /**
+     * Sets whether or not this fireball should be cursor-guided. False by
+     * default.
+     *
+     * @param isGuided whether or not this fireball is guided
+     */
+    public void setGuided(boolean isGuided);
+
+    /**
+     * Gets whether or not this fireball is cursor-guided.
+     *
+     * @return whether or not this fireball is guided
+     */
+    public boolean getGuided();
+
     /**
      * Fireballs fly straight and do not take setVelocity(...) well.
      *
@@ -20,5 +36,4 @@ public interface Fireball extends Projectile, Explosive {
      * @return the direction
      */
     public Vector getDirection();
-
 }

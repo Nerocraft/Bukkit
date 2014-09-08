@@ -85,15 +85,15 @@ public interface Server extends PluginMessageRecipient {
     public String getBukkitVersion();
 
     /**
-     * Gets an array copy of all currently logged in players.
-     * <p>
-     * This method exists for legacy reasons to provide backwards
-     * compatibility. It will not exist at runtime and should not be used
-     * under any circumstances.
-     *
-     * @Deprecated superseded by {@link #getOnlinePlayers()}
-     * @return an array of Players that are currently online
-     */
+    * Gets an array copy of all currently logged in players.
+    * <p>
+    * This method exists for legacy reasons to provide backwards
+    * compatibility. It will not exist at runtime and should not be used
+    * under any circumstances.
+    *
+    * @Deprecated superseded by {@link #getOnlinePlayers()}
+    * @return an array of Players that are currently online
+    */
     @Deprecated
     public Player[] _INVALID_getOnlinePlayers();
 
@@ -308,23 +308,23 @@ public interface Server extends PluginMessageRecipient {
      * <p>
      * This method may not return objects for offline players.
      *
-     * @deprecated Use {@link #getPlayer(UUID)} as player names are no longer
-     *     guaranteed to be unique
+//     * @deprecated Use {@link #getPlayer(UUID)} as player names are no longer
+//     *     guaranteed to be unique
      * @param name the name to look up
      * @return a player if one was found, null otherwise
      */
-    @Deprecated
+//    @Deprecated // Nerocraft - Removed deprecation
     public Player getPlayer(String name);
 
     /**
      * Gets the player with the exact given name, case insensitive.
      *
-     * @deprecated Use {@link #getPlayer(UUID)} as player names are no longer
-     *     guaranteed to be unique
+//     * @deprecated Use {@link #getPlayer(UUID)} as player names are no longer
+//     *     guaranteed to be unique
      * @param name Exact name of the player to retrieve
      * @return a player object if one was found, null otherwise
      */
-    @Deprecated
+//    @Deprecated // Nerocraft - Removed deprecation
     public Player getPlayerExact(String name);
 
     /**

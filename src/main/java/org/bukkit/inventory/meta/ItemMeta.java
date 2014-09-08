@@ -50,13 +50,13 @@ public interface ItemMeta extends Cloneable, ConfigurationSerializable {
      * <p>
      * Plugins should check if hasLore() returns <code>true</code> before
      * calling this method.
-     * 
+     *
      * @return a list of lore that is set
      */
     List<String> getLore();
 
     /**
-     * Sets the lore for this item. 
+     * Sets the lore for this item.
      * Removes lore when given null.
      *
      * @param lore the lore that will be set
@@ -123,6 +123,21 @@ public interface ItemMeta extends Cloneable, ConfigurationSerializable {
     * @return true if the enchantment conflicts, false otherwise
     */
     boolean hasConflictingEnchant(Enchantment ench);
+
+    // Nerocraft - Implemented Unbreakable ItemMeta API (https://github.com/Kiskae/Bukkit/commit/df02da4081aeba08d96efa00f7be2afdf7aa5f6a)
+    /**
+     * Returns whether this does not lose durability on use.
+     *
+     * @return true if this does not lose durability on use, false otherwise.
+     */
+    boolean isUnbreakable();
+
+    /**
+     * Sets whether this does not lose durability on use.
+     *
+     * @param unbreakable this indicates whether this does not lose durability on use
+     */
+    void setUnbreakable(boolean unbreakable);
 
     @SuppressWarnings("javadoc")
     ItemMeta clone();

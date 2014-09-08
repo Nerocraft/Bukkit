@@ -118,6 +118,9 @@ public enum EntityType {
     SPIDER("Spider", Spider.class, 52),
     GIANT("Giant", Giant.class, 53),
     ZOMBIE("Zombie", Zombie.class, 54),
+    MINION("Minion", Minion.class, 54), // Nerocraft
+    WRAITH("Wraith", Wraith.class, 54), // Nerocraft
+    GOBLIN("Goblin", Goblin.class, 54), // Nerocraft
     SLIME("Slime", Slime.class, 55),
     GHAST("Ghast", Ghast.class, 56),
     PIG_ZOMBIE("PigZombie", PigZombie.class, 57),
@@ -155,7 +158,7 @@ public enum EntityType {
     /**
      * A fishing line and bobber.
      */
-    FISHING_HOOK(null, Fish.class, -1, false),
+    FISHING_HOOK(null, FishHook.class, -1, false), // Nerocraft - Changed Fish to FishHook
     /**
      * A bolt of lightning.
      * <p>

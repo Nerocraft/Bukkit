@@ -29,7 +29,8 @@ public class VersionCommand extends BukkitCommand {
         if (!testPermission(sender)) return true;
 
         if (args.length == 0) {
-            sender.sendMessage("This server is running " + Bukkit.getName() + " version " + Bukkit.getVersion() + " (Implementing API version " + Bukkit.getBukkitVersion() + ")");
+//            sender.sendMessage("This server is running " + Bukkit.getName() + " version " + Bukkit.getVersion() + " (Implementing API version " + Bukkit.getBukkitVersion() + ")"); // Nerocraft - Changed
+            sender.sendMessage(Bukkit.getName() + " " + Bukkit.getVersion() + " (Implementing API version " + Bukkit.getBukkitVersion() + ")");
         } else {
             StringBuilder name = new StringBuilder();
 

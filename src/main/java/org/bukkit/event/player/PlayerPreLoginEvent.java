@@ -116,15 +116,6 @@ public class PlayerPreLoginEvent extends Event {
         return handlers;
     }
 
-    /**
-     * Gets the player's unique ID.
-     *
-     * @return The unique ID
-     */
-    public UUID getUniqueId() {
-        return uniqueId;
-    }
-
     public static HandlerList getHandlerList() {
         return handlers;
     }

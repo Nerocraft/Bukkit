@@ -37,7 +37,6 @@ public class VehicleMoveEvent extends VehicleEvent {
         return to;
     }
 
-
     @Override
     public HandlerList getHandlers() {
         return handlers;

@@ -147,16 +147,6 @@ public class EntityDamageEvent extends EntityEvent implements Cancellable {
     }
 
     /**
-     * This method exists for legacy reasons to provide backwards
-     * compatibility. It will not exist at runtime and should not be used
-     * under any circumstances.
-     */
-    @Deprecated
-    public int _INVALID_getDamage() {
-        return NumberConversions.ceil(getDamage());
-    }
-
-    /**
      * Sets the raw amount of damage caused by the event.
      * <p>
      * For compatibility this also recalculates the modifiers and scales
@@ -191,16 +181,6 @@ public class EntityDamageEvent extends EntityEvent implements Cancellable {
         }
 
         setDamage(DamageModifier.BASE, damage);
-    }
-
-    /**
-     * This method exists for legacy reasons to provide backwards
-     * compatibility. It will not exist at runtime and should not be used
-     * under any circumstances.
-     */
-    @Deprecated
-    public void _INVALID_setDamage(int damage) {
-        setDamage(damage);
     }
 
     /**

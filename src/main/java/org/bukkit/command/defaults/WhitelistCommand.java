@@ -86,7 +86,7 @@ public class WhitelistCommand extends VanillaCommand {
 
     private boolean badPerm(CommandSender sender, String perm) {
         if (!sender.hasPermission("bukkit.command.whitelist." + perm)) {
-            sender.sendMessage(ChatColor.RED + "You do not have permission to perform this action.");
+//            sender.sendMessage(ChatColor.RED + "You do not have permission to perform this action."); // Nerocraft - Removed
             return true;
         }
 

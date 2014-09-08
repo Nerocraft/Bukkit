@@ -90,7 +90,6 @@ public interface CommandMap {
      */
     public Command getCommand(String name);
 
-
     /**
      * Looks for the requested command and executes an appropriate
      * tab-completer if found. This method will also tab-complete partial

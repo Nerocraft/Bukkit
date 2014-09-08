@@ -48,6 +48,14 @@ public interface Entity extends Metadatable {
      */
     public Vector getVelocity();
 
+    // Nerocraft - Added 'inWater()' getter into Bukkit API, including documentation
+    /**
+     * Gets whether this entity is in water or not.
+     *
+     * @return True if the entity is in water.
+     */
+    public boolean inWater();
+
     /**
      * Returns true if the entity is supported by a block. This value is a
      * state updated by the server and is not recalculated unless the entity

@@ -14,7 +14,7 @@ public interface Boat extends Vehicle {
     public double getMaxSpeed();
 
     /**
-     * Sets the maximum speed of a boat. Must be nonnegative. Default is 0.4D.
+     * Sets the maximum speed of a boat. Must be nonnegative. Default is 0.35D.
      *
      * @param speed The max speed.
      */
@@ -25,7 +25,10 @@ public interface Boat extends Vehicle {
      * boats. The default is 0.2.
      *
      * @return The rate of deceleration
+     *
+     * @deprecated This function no longer has any effect and is provided only for legacy reasons.
      */
+    @Deprecated
     public double getOccupiedDeceleration();
 
     /**
@@ -34,7 +37,10 @@ public interface Boat extends Vehicle {
      * The default is 0.2.
      *
      * @param rate deceleration rate
+     *
+     * @deprecated This function no longer has any effect and is provided only for legacy reasons.
      */
+    @Deprecated
     public void setOccupiedDeceleration(double rate);
 
     /**
@@ -69,4 +75,18 @@ public interface Boat extends Vehicle {
      * @param workOnLand whether boats can work on land
      */
     public void setWorkOnLand(boolean workOnLand);
+
+    /**
+     * Gets a boat's damage.
+     *
+     * @return The damage
+     */
+    public double getDamage();
+
+    /**
+     * Sets a boat's damage.
+     *
+     * @param damage over 40 to "kill" a boat
+     */
+    public void setDamage(double damage);
 }

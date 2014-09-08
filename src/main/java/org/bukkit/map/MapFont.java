@@ -52,7 +52,7 @@ public class MapFont {
             throw new IllegalArgumentException("text contains invalid characters");
         }
 
-        if (text.length() == 0){
+        if (text.length() == 0) {
             return 0;
         }
 

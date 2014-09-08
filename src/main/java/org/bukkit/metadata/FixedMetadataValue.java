@@ -32,9 +32,7 @@ public class FixedMetadataValue extends LazyMetadataValue {
     }
 
     @Override
-    public void invalidate() {
-
-    }
+    public void invalidate() {}
 
     @Override
     public Object value() {

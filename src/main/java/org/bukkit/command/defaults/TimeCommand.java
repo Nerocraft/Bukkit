@@ -35,7 +35,7 @@ public class TimeCommand extends VanillaCommand {
 
         if (args[0].equals("set")) {
             if (!sender.hasPermission("bukkit.command.time.set")) {
-                sender.sendMessage(ChatColor.RED + "You don't have permission to set the time");
+//                sender.sendMessage(ChatColor.RED + "You don't have permission to set the time"); // Nerocraft - Removed
                 return true;
             }
 
@@ -54,7 +54,7 @@ public class TimeCommand extends VanillaCommand {
             Command.broadcastCommandMessage(sender, "Set time to " + value);
         } else if (args[0].equals("add")) {
             if (!sender.hasPermission("bukkit.command.time.add")) {
-                sender.sendMessage(ChatColor.RED + "You don't have permission to set the time");
+//                sender.sendMessage(ChatColor.RED + "You don't have permission to set the time"); // Nerocraft - Removed
                 return true;
             }
 

@@ -1,6 +1,5 @@
 package org.bukkit.event;
 
-
 public class TestEvent extends Event {
     private static final HandlerList handlers = new HandlerList();
 

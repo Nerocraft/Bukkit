@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.commons.lang.Validate;
+import org.bukkit.ChatColor;
 import org.bukkit.Warning;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
@@ -31,7 +32,9 @@ public class PlayerChatEvent extends PlayerEvent implements Cancellable {
     public PlayerChatEvent(final Player player, final String message) {
         super(player);
         this.message = message;
-        this.format = "<%1$s> %2$s";
+//        this.format = "<%1$s> %2$s"; // MARK: Nerocraft - Chat Format
+//        this.format = "%1$s: %2$s"; // Nerocraft - Changed chat format
+        this.format = ChatColor.GRAY + "[" + ChatColor.GOLD + Integer.toString(player.getLevel()) + ChatColor.GRAY + "]" + ChatColor.RESET + " %1$s: %2$s";
         this.recipients = new HashSet<Player>(player.getServer().getOnlinePlayers());
     }
 

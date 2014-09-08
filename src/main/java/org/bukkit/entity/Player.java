@@ -212,7 +212,6 @@ public interface Player extends HumanEntity, Conversable, CommandSender, Offline
      */
     public void playNote(Location loc, Instrument instrument, Note note);
 
-
     /**
      * Play a sound for a player at the location.
      * <p>
@@ -1035,4 +1034,10 @@ public interface Player extends HumanEntity, Conversable, CommandSender, Offline
      * @see Player#setHealthScaled(boolean)
      */
     public double getHealthScale();
+
+    // Nerocraft - Implemented Player respawn API (https://github.com/SpigotMC/Spigot/blob/master/Bukkit-Patches/0018-Add-respawn-API.patch)
+    /**
+     * Respawns the player if dead.
+     */
+    public void respawn();
 }

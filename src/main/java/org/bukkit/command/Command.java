@@ -144,8 +144,10 @@ public abstract class Command {
             return true;
         }
 
+// Nerocraft - Removed permission denied message
+// TODO: Nerocraft - Fix formatting
         if (permissionMessage == null) {
-            target.sendMessage(ChatColor.RED + "I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
+//            target.sendMessage(ChatColor.RED + "I'm sorry, but you do not have permission to perform this command. Please contact the server administrators if you believe that this is in error.");
         } else if (permissionMessage.length() != 0) {
             for (String line : permissionMessage.replace("<permission>", permission).split("\n")) {
                 target.sendMessage(line);

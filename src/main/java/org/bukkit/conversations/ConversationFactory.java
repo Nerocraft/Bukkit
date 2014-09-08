@@ -141,7 +141,6 @@ public class ConversationFactory {
         return withConversationCanceller(new ExactMatchConversationCanceller(escapeSequence));
     }
 
-
     /**
      * Adds a {@link ConversationCanceller} to constructed conversations.
      *

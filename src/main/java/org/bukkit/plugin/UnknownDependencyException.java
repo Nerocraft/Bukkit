@@ -40,7 +40,5 @@ public class UnknownDependencyException extends RuntimeException {
     /**
      * Constructs a new UnknownDependencyException
      */
-    public UnknownDependencyException() {
-
-    }
+    public UnknownDependencyException() {}
 }

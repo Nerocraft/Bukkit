@@ -384,6 +384,27 @@ public interface World extends PluginMessageRecipient, Metadatable {
      */
     public LightningStrike strikeLightningEffect(Location loc);
 
+    // Nerocraft - Implemented silenceable lightning API into Bukkit API, including documentation
+    /**
+     * Strikes lightning at the given {@link Location}
+     *
+     * @param loc The location to strike lightning
+     * @param isExplosionSilent Whether the explosion of this lightning should be silenced
+     * @param isThunderSilent Whether the thunder of this lightning should be silenced
+     * @return The lightning entity.
+     */
+    public LightningStrike strikeLightning(Location loc, boolean isExplosionSilent, boolean isThunderSilent);
+
+    /**
+     * Strikes lightning at the given {@link Location} without doing damage
+     *
+     * @param loc The location to strike lightning
+     * @param isExplosionSilent Whether the explosion this lightning will produce should be silenced
+     * @param isThunderSilent Whether the thunder this lightning will produce should be silenced
+     * @return The lightning entity.
+     */
+    public LightningStrike strikeLightningEffect(Location loc, boolean isExplosionSilent, boolean isThunderSilent);
+
     /**
      * Get a list of all entities in this World
      *

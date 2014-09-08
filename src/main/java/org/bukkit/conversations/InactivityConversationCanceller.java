@@ -73,7 +73,5 @@ public class InactivityConversationCanceller implements ConversationCanceller {
      *
      * @param conversation The conversation being abandoned.
      */
-    protected void cancelling(Conversation conversation) {
-
-    }
+    protected void cancelling(Conversation conversation) {}
 }

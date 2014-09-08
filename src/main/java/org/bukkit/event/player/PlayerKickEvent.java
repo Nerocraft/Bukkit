@@ -30,7 +30,7 @@ public class PlayerKickEvent extends PlayerEvent implements Cancellable {
     }
 
     /**
-     * Gets the leave message send to all online players
+     * Gets the leave message sent to all online players
      *
      * @return string kick reason
      */
@@ -56,7 +56,7 @@ public class PlayerKickEvent extends PlayerEvent implements Cancellable {
     }
 
     /**
-     * Sets the leave message send to all online players
+     * Sets the leave message sent to all online players
      *
      * @param leaveMessage leave message
      */
